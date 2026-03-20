@@ -1,0 +1,22 @@
+rules:
+  - id: "revenue_drop_definition"
+    description: "Consider a revenue drop when week-over-week revenue decreases by at least 10%."
+    threshold:
+      type: "percent_change"
+      op: "lt"
+      value: 0.10
+
+  - id: "revenue_increase_definition"
+    description: "Consider a revenue increase when week-over-week revenue increases by at least 10%."
+    threshold:
+      type: "percent_change"
+      op: "gt"
+      value: 0.10
+
+  - id: "anomaly_hint"
+    description: "Use the term 'anomaly' when percent change magnitude is >= 25%."
+    threshold:
+      type: "abs_percent_change"
+      op: "gte"
+      value: 0.25
+

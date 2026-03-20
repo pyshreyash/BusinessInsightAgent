@@ -1,0 +1,27 @@
+metrics:
+  revenue:
+    formula: "SUM(price * quantity)"
+    table: "fact_sales"
+    grain: "daily"
+
+  quantity_sold:
+    formula: "SUM(quantity)"
+    table: "fact_sales"
+    grain: "daily"
+
+dimensions:
+  - time
+  - product
+  - region
+
+dimension_mappings:
+  time:
+    table: "dim_time"
+    key: "date"
+  product:
+    table: "dim_product"
+    key: "product_id"
+  region:
+    table: "dim_product"
+    key: "category"
+
