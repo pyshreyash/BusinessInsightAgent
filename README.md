@@ -37,7 +37,7 @@ curl -X POST http://localhost:8000/api/query \
   -d '{"question":"Why did revenue drop last week?"}'
 ```
 
-## Example Request Flow
+### Example Request Flow
 
 1. Client sends `POST /api/query` with `{ "question": "Why did revenue drop last week?" }`
 2. LangGraph workflow runs nodes in order:
