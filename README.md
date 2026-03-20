@@ -102,3 +102,4 @@ Then the Agent triggers:
 - The SQL generator currently builds a deterministic week-over-week time-series scaffold.
 - The LLM refinement is best-effort and optional; deterministic validation remains the safety gate.
 
+*Fun fact: The project is vibe-coded using Cursor :wink:*
